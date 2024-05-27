@@ -31,6 +31,7 @@ Perfil {{ usuario }}
 <div class="bloco-add-img"></div>
 <h2>{{ usuario.username }} - Ver perfil</h2>
 {% endif %}
+
 </div>
 <div class="conteudo">
 {% for foto in usuario.fotos %}
@@ -39,14 +40,13 @@ Perfil {{ usuario }}
     </div>
 
 {% endfor %}
-    </div>
+</div>
 
     <script>
       let input = document.getElementById("foto");
       let imagemArquivo = document.getElementById("imagem-arquivo");
 
-      input.addEventListener("cha
-      nge", () => {
+      input.addEventListener("change", () => {
         let inputImagem = document.querySelector("input[type=file]").files[0];
 
         imagemArquivo.classList.add("visivel");
